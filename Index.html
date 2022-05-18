@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .Parent_Wrapper{
+             width: 100%;
+             height: 100vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-wrap: wrap;
+             margin: 1.5rem 0 0;
+         }
+         .child_wrp{
+             width: 50%;
+             height: auto;
+             background: #eee;
+             display: grid;
+             grid-template-columns: repeat(1 ,1fr);
+             flex-wrap: wrap;
+             align-items: center ;
+             justify-content: center;
+             padding:2rem 0;
+           /* position: absolute;  z-index: 99; */
+
+         }
+         .child_wrp form {
+             width: 50%;
+             margin: 0 auto;
+         }
+         .child_wrp input {
+             padding: .5rem 1rem; 
+             border-radius: 5px;
+             color: #999;
+             margin: 0 0 1rem;
+             width:90%;
+         }
+        button{
+             padding: .7rem 1rem ; 
+         }
+         #IFrame{
+             display: none;
+         }
+    </style>
+</head>
+<body>
+  <div class="Parent_Wrapper">
+      <div class="child_wrp">
+        <!-- id="Form" -->
+         <form>
+             <input  type = "text" placeholder="user name" />
+             <br/>
+             <input  type = "password" placeholder="password" />
+             <br/> 
+         </form> 
+         <button onclick="handleIframe()" style="width:50%; margin:0 auto;background:#eee;color:#000;">Submit</button>
+      </div>
+      <div id="IFrame" style="width: 90%; margin: 2rem auto ; ">
+        <iframe width="100%" height="900" frameborder="0" scrolling="no" src="https://kdatascienc.sharepoint.com/_layouts/15/Doc.aspx?sourcedoc={ce917431-9cd6-4745-a073-3997baecbdc1}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&ActiveCell='Dashboard'!A1&Item=Dashboard&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True&edesNext=false&ejss=false"></iframe>
+      </div>
+  </div>
+ 
+  <script>
+    function handleIframe(e) {
+      //  console.log(e)
+       document.getElementById('IFrame').style.display ="block";
+      //  document.getElementById('Form').style.display ="none";
+               
+
+    }
+    </script>
+</body>
+</html>
